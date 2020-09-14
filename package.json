@@ -1,0 +1,49 @@
+{
+  "name": "project-node",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./src",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test:init": "jest --init",
+    "test:coverage": "jest --coverage",
+    "test": "jest --forceExit --detectOpenHandles  --maxWorkers=1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alucardpetrovich/raschitalochka.git"
+  },
+  "author": "my team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alucardpetrovich/raschitalochka/issues"
+  },
+  "homepage": "https://github.com/alucardpetrovich/raschitalochka#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jest": "^26.4.2",
+    "joi": "^17.2.1",
+    "joi-decimal": "^1.1.2",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "pg": "^8.3.3",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.4",
+    "should-send-same-site-none": "^2.0.5",
+    "supertest": "^4.0.2",
+    "swagger-ui-express": "^4.1.4",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  }
+}

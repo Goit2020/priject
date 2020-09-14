@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Main Expenses",
+    "type": "Expense"
+  },
+  {
+    "name": "Food",
+    "type": "Expense"
+  },
+  {
+    "name": "Car",
+    "type": "Expense"
+  },
+  {
+    "name": "Self Care",
+    "type": "Expense"
+  },
+  {
+    "name": "Child Care",
+    "type": "Expense"
+  },
+  {
+    "name": "House",
+    "type": "Expense"
+  },
+  {
+    "name": "Education",
+    "type": "Expense"
+  },
+  {
+    "name": "Entertaiment",
+    "type": "Expense"
+  },
+  {
+    "name": "Other",
+    "type": "Expense"
+  },
+  {
+    "name": "Replenishment",
+    "type": "Income"
+  }
+]
