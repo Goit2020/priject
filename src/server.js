@@ -12,7 +12,12 @@ const User = require('./models/index').User;
 const Transaction = require('./models/index').Transaction;
 const TransactionCategory = require('./models/index').TransactionCategory;
 
-const { authRouter, categoryRouter, transactionsRouter } = require('./routes');
+const {
+  authRouter,
+  categoryRouter,
+  transactionsRouter,
+  userRouter,
+} = require('./routes');
 const { initCategories } = require('./controllers/transactionCategory');
 
 const errorHandler = (err, req, res, next) =>
@@ -21,13 +26,14 @@ const errorHandler = (err, req, res, next) =>
 const initRoutes = () => {
   app.use('/transaction-categories', categoryRouter);
   app.use('/transactions', transactionsRouter);
+  app.use('/user', userRouter);
 };
 
 const startServer = async port => {
   app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
   app.use(express.json({ limit: '25kb' }));
   app.use(cookieParser());
-  app.use(shouldSendSameSiteNone);
+  // app.use(shouldSendSameSiteNone);
   app.use(morgan('dev'));
 
   await Session.sync();
@@ -39,7 +45,7 @@ const startServer = async port => {
   initRoutes();
 
   require('./config/passport');
-  app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument)); // swagger
+  app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
   app.use('/auth', authRouter);
   app.use(errorHandler);
 

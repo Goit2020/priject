@@ -5,6 +5,7 @@ const {
   transactionEndpoints,
   transactionDefinitions,
 } = require('./transactions.docs');
+const { userEndpoints, userDefinitions } = require('./user.docs');
 
 const swaggerDocument = {
   swagger: '2.0',
@@ -24,11 +25,13 @@ const swaggerDocument = {
     ...authEndpoints,
     ...categoryEndpoints,
     ...transactionEndpoints,
+    ...userEndpoints,
   },
   definitions: {
     ...authDefinitions,
     ...categoryDefinitions,
     ...transactionDefinitions,
+    ...userDefinitions,
   },
 };
 
