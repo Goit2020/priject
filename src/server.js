@@ -33,7 +33,7 @@ const startServer = async port => {
   app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
   app.use(express.json({ limit: '25kb' }));
   app.use(cookieParser());
-  // app.use(shouldSendSameSiteNone);
+  app.use(shouldSendSameSiteNone);
   app.use(morgan('dev'));
 
   await Session.sync();

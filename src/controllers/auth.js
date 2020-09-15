@@ -31,8 +31,8 @@ const signUp = async (req, res, next) => {
       maxAge: 24 * 60 * 60 * 1000,
       path: '/',
       httpOnly: true,
-      // sameSite: 'none',
-      // secure: true,
+      sameSite: 'none',
+      secure: true,
     });
 
     return res.status(201).send({
@@ -73,8 +73,8 @@ const signIn = async (req, res, next) => {
       maxAge: 24 * 60 * 60 * 1000,
       path: '/',
       httpOnly: true,
-      // sameSite: 'none',
-      // secure: true,
+      sameSite: 'none',
+      secure: true,
     });
 
     return res.status(201).json({
