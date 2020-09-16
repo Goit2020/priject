@@ -24,9 +24,9 @@ const errorHandler = (err, req, res, next) =>
   res.status(500).send({ message: err.stack });
 
 const initRoutes = () => {
-  app.use('/transaction-categories', categoryRouter);
-  app.use('/transactions', transactionsRouter);
-  app.use('/user', userRouter);
+  app.use('/transaction-categories/', categoryRouter);
+  app.use('/transactions/', transactionsRouter);
+  app.use('/user/', userRouter);
 };
 
 const startServer = async port => {
@@ -62,8 +62,8 @@ const startServer = async port => {
   initRoutes();
 
   require('./config/passport');
-  app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-  app.use('/auth', authRouter);
+  app.use('/docs/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+  app.use('/auth/', authRouter);
   app.use(errorHandler);
 
   return app.listen(port);
