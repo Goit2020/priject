@@ -40,10 +40,10 @@ const startServer = async port => {
     cors({
       credentials: true,
       origin: [
-        'https://raschitalochka-goit.netlify.app',
-        'http://localhost:3000',
+        'https://raschitalochka-goit.netlify.app/',
+        'http://localhost:3000/',
       ],
-      default: 'https://raschitalochka-goit.netlify.app',
+      default: 'https://raschitalochka-goit.netlify.app/',
     }),
   );
 
