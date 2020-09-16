@@ -30,7 +30,13 @@ const initRoutes = () => {
 };
 
 const startServer = async port => {
-  app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+  app.use(
+    cors({
+      credentials: true,
+      origin: 'https://raschitalochka-goit.netlify.app/',
+    }),
+  );
+  // app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
   app.use(express.json({ limit: '25kb' }));
   app.use(cookieParser());
   app.use(shouldSendSameSiteNone);
