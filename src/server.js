@@ -33,7 +33,7 @@ const startServer = async port => {
   app.use(
     cors({
       credentials: true,
-      origin: 'https://raschitalochka-goit.netlify.app/',
+      origin: 'https://raschitalochka-goit.netlify.app',
     }),
   );
   // app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
