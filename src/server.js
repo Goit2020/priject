@@ -43,7 +43,7 @@ const startServer = async port => {
         'https://raschitalochka-goit.netlify.app',
         'http://localhost:3000',
       ],
-      default: 'https://raschitalochka-goit.netlify.ap',
+      default: 'https://raschitalochka-goit.netlify.app',
     }),
   );
 

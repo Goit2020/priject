@@ -6,11 +6,11 @@ const {
   createTransaction,
   getTransactionsController,
   getTransactionsSummary,
-} = require('../controllers/transactions');
+} = require('../controllers/transactions/');
 const {
   validateCreateTransaction,
   validateGetTransactionsSummary,
-} = require('../validation/transaction');
+} = require('../validation/transaction/');
 
 transactionsRouter.post(
   '/',
@@ -21,7 +21,7 @@ transactionsRouter.post(
 
 transactionsRouter.get('/', validateAuth, getTransactionsController);
 transactionsRouter.get(
-  '/summary',
+  '/summary/',
   validateAuth,
   validateGetTransactionsSummary,
   getTransactionsSummary,
