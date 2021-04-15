@@ -36,16 +36,16 @@ const startServer = async port => {
   //     origin: 'https://raschitalochka-goit.netlify.app',
   //   }),
   // );
-  app.use(
-    cors({
-      credentials: true,
-      origin: [
-        'https://raschitalochka-goit.netlify.app',
-        'http://localhost:3000',
-      ],
-      default: 'https://raschitalochka-goit.netlify.app',
-    }),
-  );
+  // app.use(
+  //   cors({
+  //     credentials: true,
+  //     origin: [
+  //       'https://raschitalochka-goit.netlify.app',
+  //       'http://localhost:3000',
+  //     ],
+  //     default: 'https://raschitalochka-goit.netlify.app',
+  //   }),
+  // );
 
   // app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
   app.use(express.json({ limit: '25kb' }));
